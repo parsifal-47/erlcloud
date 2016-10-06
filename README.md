@@ -9,19 +9,22 @@ Service APIs implemented:
 - Amazon Elastic Compute Cloud (EC2)
 - Amazon Simple Storage Service (S3)
 - Amazon Simple Queue Service (SQS)
-- Amazon DynamoDB (ddb2)
+- Amazon DynamoDB & DDB streams (ddb2)
 - Amazon Autoscalling(as)
 - Amazon CloudTrail (CT)
-- CloudFormations
+- Cloud Formation (CFN)
 - ElasticLoadBalancing (ELB)
 - Identity and Access Management (IAM)
 - Kinesis
 - CloudWatch
+- MechanicalTurk
+- Simple DB (SDB)
 - Relational Data Service (RDS)
 - Simple Email Service (SES)
+- Short Token Service (STS)
 - Simple Notification Service (SNS)
 - Web Application Firewall (WAF)
-- and etc..
+- and more to come
 
 Majority of API functions have been implemented.
 Not all functions have been thoroughly tested, so exercise care when integrating this library into production code.
@@ -46,7 +49,7 @@ Below is the proposed library roadmap update along with regular features and fix
  Making it backward compatible does not seem feasible and valuable at the moment.
 
 - v2.1.X
- * fix dializer findings and make it mandatory for the library
+ * fix dialyzer findings and make it mandatory for the library
  * make full support of Mix/HEX
 
 - v2.2.X
