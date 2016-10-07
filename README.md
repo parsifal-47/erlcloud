@@ -38,21 +38,22 @@ The libraries can be used two ways:
 
 Below is the proposed library roadmap update along with regular features and fixes.
 
-- v0.13.9
+- 0.13.9
  * Existing code
 
-- v2.0.X
- * Going further we would like to merge in [Alert Logic](https://github.com/alertlogic/erlcloud/tree/v1.2.3) fork.
+- 2.0.X
+ * Going further we would like to merge in [Alert Logic](https://github.com/alertlogic/erlcloud/tree/v1.2.3) fork into upstream.
  This is a major version bump which contains lots of new features and functionality.
  Unfortunately, it also contains quite a number of low level APIs incompatibilities since the fork diverged for a long while.
- No APIs have been removed and it's on top or 0.13.8 at the moment.
+ * No APIs have been removed and it's on branched of 0.13.8 at the moment. Any minor version delta added during notice time will be compensated before the merge.
  Making it backward compatible does not seem feasible and valuable at the moment.
+ * intentionally jumping to v2.0.X as AL fork has v1.0.X
 
-- v2.1.X
+- 2.1.X
  * fix dialyzer findings and make it mandatory for the library
  * make full support of Mix/HEX
 
-- v2.2.X
+- 2.2.X
  * Further deprecation of legacy functionality
   * Only SigV4 signing and generalised in one module. Keep SigV2 in SBD section only
   * no more `erlang:error()` use and use of regular tuples as error API.
