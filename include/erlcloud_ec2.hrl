@@ -20,27 +20,27 @@
 }).
 
 -record(ec2_instance_spec, {
-          image_id::string(),
+          image_id::string()|undefined,
           min_count=1::pos_integer(),
           max_count=1::pos_integer(),
-          key_name::string(),
+          key_name::string()|undefined,
           group_set=["default"]::[string()],
-          user_data::binary(),
-          instance_type::string(),
-          availability_zone::string(),
-          placement_group::string(),
-          kernel_id::string(),
-          ramdisk_id::string(),
+          user_data::binary()|undefined,
+          instance_type::string()|undefined,
+          availability_zone::string()|undefined,
+          placement_group::string()|undefined,
+          kernel_id::string()|undefined,
+          ramdisk_id::string()|undefined,
           block_device_mapping=[]::[ec2_block_device_mapping()],
           monitoring_enabled=false::boolean(),
-          subnet_id::string(),
+          subnet_id::string()|undefined,
           disable_api_termination=false::boolean(),
-          instance_initiated_shutdown_behavior::ec2_shutdown_behavior(),
+          instance_initiated_shutdown_behavior::ec2_shutdown_behavior()|undefined,
           net_if=[] :: [#ec2_net_if{}],
           ebs_optimized = false :: boolean(),
           iam_instance_profile_name = undefined :: string(),
-          spot_price::string(),
-          weighted_capacity::number()
+          spot_price::string()|undefined,
+          weighted_capacity::number()|undefined
          }).
 -record(ec2_image_spec, {
           image_location::string(),
